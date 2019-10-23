@@ -1,0 +1,30 @@
+#main {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.gameImg_container {
+  text-align: center;
+}
+#gameImg {
+  max-width: 300px;
+  max-height: 400px;
+  margin: 0px, 15px;
+}
+#slideImg {
+  max-width: inherit;
+  max-height: inherit;
+}
+.row {
+  margin-top: 20px;
+}
+#moreBtn {
+  border-left: 0px;
+  padding-left: 0px;
+}
+#more {
+  display: none;
+}
+#cart {
+  max-width: 50px;
+  max-height: 50px;
+}

@@ -1,0 +1,61 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  title Couch Gaming
+  // Bootstrap
+  link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+  // Local Stylesheets
+  link(rel='stylesheet' href='/css/master.css')
+  link(rel='stylesheet' href='/css/index.css')
+
+// Just an image
+nav.navbar.navbar-dark.bg-dark.navbar-expand-lg.navbar-fixed-top(role='navigation')
+  a#Title.navbar-brand.h1(href='/')  Couch
+  button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarNavDropdown.collapse.navbar-collapse.mx-auto
+    ul#links.navbar-nav.mx-auto
+      li.nav-item.navbar-left
+        a.nav-link(href='/games')
+          div| Games
+            #triangle-down.tri
+      li.nav-item
+        a.nav-link(href='#')
+          | Community
+          #triangle-down.tri
+      li.nav-item
+        a.nav-link(href='#')
+          | Account
+          #triangle-down.tri
+  div.form-inline
+    a.btn.cart_container(href="#")
+      img#cart(src="images/shopping-cart.svg")
+// Games Table
+table.table.table-dark
+  thead
+    tr.main_row
+      each game, i in games
+        th(scope="col")
+          a(href="/games/" + game._id)
+            if game.title == "Call of Duty Modern Warfare 2"
+              img(src="https://images.g2a.com/newlayout/323x433/1x1x0/0cdddac77d01/590db0535bafe38c581a2208").gameCover
+            else if game.title == "Kingdom Hearts 3"
+              img(src="https://pbs.twimg.com/media/DnXIO6PW4AA0q37.jpg:large").gameCover
+            else if game.title == "Final Fantasy XIV"
+              img(src="https://i.pinimg.com/originals/f5/d9/0f/f5d90f6f6ed91d1a244eaceba14ebbe2.jpg").gameCover
+    //- tr.main_row
+    //-   th(scope="col")
+    //-     a(href="/modern-warfare-2")
+    //-       img(src="https://images.g2a.com/newlayout/323x433/1x1x0/0cdddac77d01/590db0535bafe38c581a2208").gameCover
+    //-   th(scope="col")
+    //-     a(href="#")
+    //-       img(src="https://pbs.twimg.com/media/DnXIO6PW4AA0q37.jpg:large").gameCover
+    //-   th(scope="col")
+    //-     a(href="#")
+    //-       img(src="https://i.pinimg.com/originals/f5/d9/0f/f5d90f6f6ed91d1a244eaceba14ebbe2.jpg").gameCover
+// Footer
+div.card.text-center
+  div.card-body
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
