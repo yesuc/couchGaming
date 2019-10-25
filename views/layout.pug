@@ -1,0 +1,41 @@
+doctype html
+head
+  block head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    title Couch Gaming
+    // Bootstrap
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet' href='/css/master.css')
+  
+body
+  // Nav Bar
+  nav.navbar.navbar-dark.bg-dark.navbar-expand-lg.navbar-fixed-top(role='navigation')
+    a#Title.navbar-brand.h1(href='/')  Couch
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNavDropdown.collapse.navbar-collapse.mx-auto
+      ul#links.navbar-nav.mx-auto
+        li.nav-item.navbar-left
+          a.nav-link(href='/games')
+            div| Games
+              #triangle-down.tri
+        li.nav-item
+          a.nav-link(href='#')
+            | Community
+            #triangle-down.tri
+        li.nav-item
+          a.nav-link(href='#')
+            | Account
+            #triangle-down.tri
+    div.form-inline
+      a.btn.cart_container(href="#")
+        img#cart(src="/images/shopping-cart.svg")
+  // Main Body
+  block content
+
+  // Footer
+  div.card.text-center
+    div.card-body
+      <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>

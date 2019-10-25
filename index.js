@@ -50,12 +50,13 @@ app.get('/', (req, res) => {
 });
 
 app.get("/games/:id", (request, response) => {
-  console.log(request.params.id);
-  if (Game.findById(request.params.id)) {
-    console.log(":)");
-  } else {
-    console.log(":(");
-  }
+  Game.findById(request.params.id, (err, game) => {
+    if (err) {
+      console.log("Error, couldn't find game with requested ID");
+    } else {
+      response.render('show', {game: game});
+    }
+  });
 });
 
 app.get("/modern-warfare-2", (req, res) => {

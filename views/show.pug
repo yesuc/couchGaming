@@ -1,0 +1,37 @@
+extends layout
+block append head
+  link(rel='stylesheet' href='/css/game.css')
+  script(src='/javascripts/show_more.js')
+
+block content
+  // Main Body
+  div.container#main
+    div.row
+      div.col.gameImg_container
+        if game.title == "Call of Duty Modern Warfare 2"
+          img(src="https://images.g2a.com/newlayout/323x433/1x1x0/0cdddac77d01/590db0535bafe38c581a2208")#gameImg.img-fluid
+        else if game.title == "Kingdom Hearts 3"
+          img(src="https://pbs.twimg.com/media/DnXIO6PW4AA0q37.jpg:large")#gameImg.img-fluid
+        else if game.title == "Final Fantasy XIV"
+          img(src="https://i.pinimg.com/originals/f5/d9/0f/f5d90f6f6ed91d1a244eaceba14ebbe2.jpg")#gameImg.img-fluid
+      div.col
+        table.table
+          thead.thead-light
+            tr
+              th(scope="row") Modern Warfare 2
+            tr
+              td An FPS Masterpiece and well recieved title. Originally released November 10th, 2009. Developed by Infinity Ward and Activision.
+            tr
+              td Rating: 9/10
+            tr
+              td Price: $19.99
+            tr
+              td
+                button.btn.btn-primary(type="button" onclick="") Purchase
+    div.row
+      div.col
+        img#slideImg(src="https://assets.nuuvem.com/image/upload/t_screenshot_full/v1/products/557dbc7569702d0a9c78f200/screenshots/agqkvnk87evsyo7uougi.jpg")
+      div.col
+        div The most-anticipated game of the year and the sequel to the best-selling first-person action game of all time, Modern Warfare 2 continues the gripping and heart-racing action as players face off against a new threat dedicated to bringing the world to the brink of collapse. 
+        span#more Call of Duty®: Modern Warfare 2 features for the first time in video games, the musical soundtrack of legendary Academy Award®, Golden Globe® Award, Grammy® Award and Tony winning composer Hans Zimmer. The title picks up immediately following the historic events of Call of Duty® 4: Modern Warfare®, the blockbuster title that earned worldwide critical acclaim, including: "Most Played Online Video Game" in history, 2009 Guinness World Records. More than 50 Game of the Year awards, including the Console Game of the Year and Overall Game of the Year, 2007, from the Academy of Interactive Arts & Sciences®
+        button.btn.btn-link#moreBtn(type="button" onclick="show_more()") Show more...

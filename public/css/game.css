@@ -5,10 +5,14 @@
 .gameImg_container {
   text-align: center;
 }
-#gameImg {
+/* #gameImg {
   max-width: 300px;
   max-height: 400px;
   margin: 0px, 15px;
+} */
+#gameImg {
+  max-width: 100%;
+  height: auto;
 }
 #slideImg {
   max-width: inherit;
