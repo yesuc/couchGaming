@@ -15,12 +15,12 @@ body
     a#Title.navbar-brand.h1(href='/')  Couch
     button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
       span.navbar-toggler-icon
-    #navbarNavDropdown.collapse.navbar-collapse.mx-auto
+    div#navbarNavDropdown.collapse.navbar-collapse
       ul#links.navbar-nav.mx-auto
         li.nav-item.navbar-left
           a.nav-link(href='/games')
-            div| Games
-              #triangle-down.tri
+            | Games
+            #triangle-down.tri
         li.nav-item
           a.nav-link(href='#')
             | Community
@@ -32,10 +32,15 @@ body
     div.form-inline
       a.btn.cart_container(href="#")
         img#cart(src="/images/shopping-cart.svg")
+
   // Main Body
   block content
 
   // Footer
-  div.card.text-center
+  div.card.text-center.fixed-bottom
     div.card-body
       <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a></div>
+
+script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")

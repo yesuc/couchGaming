@@ -5,6 +5,7 @@ A barebones video game marketplace developed by Yesu Carter for personal practic
 * Clean up navbar links
 * Store images in mongodb
 * DRY up code using templates
+* Implement reponsive font size via RFS in SASS
 ## Long Term Objectives
 * Integrate a continuous integration/deployment platform like CircleCI or Kubernetes
 * Deploy interactive webpage on AWS Elastic Beanstalk
