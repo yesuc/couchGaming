@@ -8,12 +8,13 @@ block content
     table.table.table-dark
       thead
         tr.main_row
-          each game, i in games
-            th(scope="col")
-              a(href="/games/" + game._id)
-                if game.title == "Call of Duty Modern Warfare 2"
-                  img(src="https://images.g2a.com/newlayout/323x433/1x1x0/0cdddac77d01/590db0535bafe38c581a2208").gameCover
-                else if game.title == "Kingdom Hearts 3"
-                  img(src="https://pbs.twimg.com/media/DnXIO6PW4AA0q37.jpg:large").gameCover
-                else if game.title == "Final Fantasy XIV"
-                  img(src="https://i.pinimg.com/originals/f5/d9/0f/f5d90f6f6ed91d1a244eaceba14ebbe2.jpg").gameCover
+          if games != null
+            each game, i in games
+              th(scope="col")
+                a(href="/games/" + game._id)
+                  if game.title == "Call of Duty Modern Warfare 2"
+                    img(src="https://images.g2a.com/newlayout/323x433/1x1x0/0cdddac77d01/590db0535bafe38c581a2208").gameCover
+                  else if game.title == "Kingdom Hearts 3"
+                    img(src="https://pbs.twimg.com/media/DnXIO6PW4AA0q37.jpg:large").gameCover
+                  else if game.title == "Final Fantasy XIV"
+                    img(src="https://i.pinimg.com/originals/f5/d9/0f/f5d90f6f6ed91d1a244eaceba14ebbe2.jpg").gameCover

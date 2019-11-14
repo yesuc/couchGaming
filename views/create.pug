@@ -1,0 +1,26 @@
+extends layout
+block append head
+  link(rel="stylesheet" href="css/create.css")
+block content
+  div.container
+    // Start Form
+    form(method="POST" action="/create")
+      div.form-group
+        label.h3(for="titleInput") Game Title
+        input.form-control(type="text" name="titleInput" required)
+      div.form-group
+        label.h3(for="ratingInput") Game Rating
+        input.form-control(type="number" name="ratingInput" min="0.00" max="10.0" step="0.01" required)
+      div.form-group
+        label.h3(for="descriptionInput") Game Description
+        input.form-control(type="text" name="descriptionInput" maxlength="250" required)
+      div.form-group
+        label.h3(for="priceInput") Game Price
+        input.form-control(type="number" name="priceInput" min="0.00" max="100" step="0.01" required)
+      div.form-group
+        label.h3(for="publisherInput") Game Publisher
+        input.form-control(type="text" name="publisherInput" maxlength="50" required)
+      div.form-group
+        label.h3(for="developerInput") Game Developer
+        input.form-control(type="text" name="developerInput" maxlength="50" required)
+      input.btn.btn-primary(type="submit" value="Submit")
